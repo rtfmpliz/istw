@@ -1,0 +1,26 @@
+<!-- application/views/scripts/guestbook/index.phtml -->
+ 
+<p><a href="<?php echo $this->url(
+    array(
+        'controller' => 'karyawan',
+        'action'     => 'sign'
+    ),
+    'default',
+    true) ?>">Sign Our Karyawan</a></p>
+ 
+Karyawan Entries: <br />
+<dl>
+    <?php foreach ($this->entries as $entry): ?>
+    <dt><?php echo $this->escape($entry->email) ?></dt>
+    <dd><?php echo $this->escape($entry->nama) ?></dd>
+    <?php endforeach ?>
+</dl>
+
+<table>
+  <?php  foreach($this->entries as $entry): ?>
+        <tr>
+            <td><?php echo $this->escape($entry->nama) ?></td>
+            <td><?php echo $this->escape($entry->email) ?></td>
+        </tr>
+  <?php endforeach;?>
+</table>

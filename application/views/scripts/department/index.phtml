@@ -1,0 +1,16 @@
+<!-- application/views/scripts/guestbook/index.phtml -->
+ 
+<p><a href="<?php echo $this->url(
+    array(
+        'controller' => 'department',
+        'action'     => 'new'
+    ),
+    'default',
+    true) ?>">Add New Department</a></p>
+ 
+Guestbook Entries: <br />
+<dl>
+    <?php foreach ($this->entries as $entry): ?>
+    <dt><?php echo $this->escape($entry->dept_name) ?></dt>
+    <?php endforeach ?>
+</dl>
