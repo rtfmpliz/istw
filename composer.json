@@ -1,0 +1,14 @@
+{
+    "name": "wahyu/istw",
+    "description": "trial",
+    "require": {
+        "zendframework1": "1.12",
+        "zendframework/zendframework1": "^1.12"
+    },
+    "authors": [
+        {
+            "name": "rtfmpliz",
+            "email": "rtfmpliz@gmail.com"
+        }
+    ]
+}
