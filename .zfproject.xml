@@ -22,6 +22,9 @@
           <actionMethod actionName="index"/>
           <actionMethod actionName="new"/>
         </controllerFile>
+        <controllerFile controllerName="Section">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Guestbook"/>
@@ -38,11 +41,14 @@
         <dbTableDirectory>
           <dbTableFile dbTableName="Karyawan"/>
           <dbTableFile dbTableName="Department"/>
+          <dbTableFile dbTableName="Section"/>
         </dbTableDirectory>
         <modelFile modelName="KaryawanMapper"/>
         <modelFile modelName="Karyawan"/>
         <modelFile modelName="DepartmentMapper"/>
         <modelFile modelName="Department"/>
+        <modelFile modelName="SectionMapper"/>
+        <modelFile modelName="Section"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
@@ -68,6 +74,9 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Department">
             <viewScriptFile forActionName="new"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Section">
+            <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

@@ -1,0 +1,10 @@
+<p><a href="<?php echo $this->url(array(
+	'controller'=>'section',
+	'action'=>'new'),
+	'default',true) ?>" >New Section</a></p>
+	Section Entries :<br/>
+	<dl>
+	<?php foreach ($this->entries as $entry):?>
+	<dt><?php echo $this->escape($entry->section)?></dt>
+	<?php endforeach ?>
+	</dl>

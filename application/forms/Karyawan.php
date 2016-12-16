@@ -19,12 +19,10 @@ class Application_Form_Karyawan extends Zend_Form
         ));
  
         // Add the comment element
-        $this->addElement('textarea', 'nama', array(
+        $this->addElement('text', 'nama', array(
             'label'      => 'Please Nama:',
             'required'   => true,
-            'validators' => array(
-                array('validator' => 'StringLength', 'options' => array(0, 20))
-                )
+
         ));
  
         // Add a captcha

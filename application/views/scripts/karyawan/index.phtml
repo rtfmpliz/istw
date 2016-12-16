@@ -6,18 +6,14 @@
         'action'     => 'sign'
     ),
     'default',
-    true) ?>">Sign Our Karyawan</a></p>
+    true) ?>">Tambah Karyawan</a></p>
  
-Karyawan Entries: <br />
-<dl>
-    <?php foreach ($this->entries as $entry): ?>
-    <dt><?php echo $this->escape($entry->email) ?></dt>
-    <dd><?php echo $this->escape($entry->nama) ?></dd>
-    <?php endforeach ?>
-</dl>
+Daftar Nama Karyawan: <br />
 
-<table>
+
+<table class="table table-striped table-hover table-bordered"><th>Nama</th><th>Email</th>
   <?php  foreach($this->entries as $entry): ?>
+  
         <tr>
             <td><?php echo $this->escape($entry->nama) ?></td>
             <td><?php echo $this->escape($entry->email) ?></td>

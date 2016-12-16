@@ -12,9 +12,7 @@ class Application_Form_Department extends Zend_Form
             'label'      => 'Department Name:',
             'required'   => true,
             'filters'    => array('StringTrim'),
-            'validators' => array(
-                array('validator' => 'StringLength', 'options' => array(0, 20))
-                )
+
         ));
  
 
