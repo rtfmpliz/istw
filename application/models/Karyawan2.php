@@ -94,16 +94,16 @@ class Application_Model_Karyawan2
         return $this->_created;
     }
  
-    public function setId($id)
-    {
-        $this->_id = (string) $id;
-        return $this;
-    }
+    // public function setId($id)
+    // {
+    //     $this->_id = (string) $id;
+    //     return $this;
+    // }
  
-    public function getId()
-    {
-        return $this->_id;
-    }
+    // public function getId()
+    // {
+    //     return $this->_id;
+    // }
 
 
 }

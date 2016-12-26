@@ -6,12 +6,12 @@ class Application_Form_Karyawan2 extends Zend_Form
     public function init()
     {
         // Set the method for the display form to POST
-        $this->setMethod('post');
-                // Add an email element
-         $this->addElement('text', 'id', array(
-             'label'      => 'NIK:'
+        // $this->setMethod('post');
+        //         // Add an email element
+        //  $this->addElement('text', 'id', array(
+        //      'label'      => 'NIK:'
             
-         ));
+        //  ));
                 // Add an email element
         $this->addElement('text', 'nama', array(
             'label'      => 'Your Name:'

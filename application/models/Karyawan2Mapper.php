@@ -27,7 +27,7 @@ class Application_Model_Karyawan2Mapper
         public function save(Application_Model_Karyawan2 $karyawan2)
     {
 		 $data = array(
-             'id' => $karyawan2->getId(),
+             //'id' => $karyawan2->getId(),
             'email'   => $karyawan2->getEmail(),
             'nama' => $karyawan2->getNama(),
             'tgllahir' => $karyawan2->getTgllahir(),
@@ -48,7 +48,7 @@ class Application_Model_Karyawan2Mapper
             return;
         }
         $row = $result->current();
-        $karyawan2->setId($row->id)
+        $karyawan2//->setId($row->id)
                   ->setEmail($row->email)
                   ->setNama($row->nama)
                   ->setTgllahir($row->tgllahir)
@@ -61,7 +61,7 @@ class Application_Model_Karyawan2Mapper
         foreach ($resultSet as $row) {
             $entry = new Application_Model_Karyawan2();
             $entry->setEmail($row->email)
-                        ->setId($row->id)
+                        //->setId($row->id)
                   ->setNama($row->nama)
                   ->setTgllahir($row->tgllahir)
                   ->setCreated($row->created);
