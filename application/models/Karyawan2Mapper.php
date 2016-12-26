@@ -60,8 +60,8 @@ class Application_Model_Karyawan2Mapper
         $entries   = array();
         foreach ($resultSet as $row) {
             $entry = new Application_Model_Karyawan2();
-            $entry->setId($row->id)
-                  ->setEmail($row->email)
+            $entry->setEmail($row->email)
+                        ->setId($row->id)
                   ->setNama($row->nama)
                   ->setTgllahir($row->tgllahir)
                   ->setCreated($row->created);

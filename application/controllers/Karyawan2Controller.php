@@ -17,21 +17,33 @@ class Karyawan2Controller extends Zend_Controller_Action
 
 public function newAction()
     {
-        $request = $this->getRequest();
-        $form    = new Application_Form_Karyawan2();
+         $request = $this->getRequest();
+         $form    = new Application_Form_Karyawan2();
  
-        if ($this->getRequest()->isPost()) {
-            if ($form->isValid($request->getPost())) {
-                $id = new Application_Model_Karyawan2($form->getValues());
-                $mapper  = new Application_Model_Karyawan2Mapper();
-                $mapper->save($id);
-                return $this->_helper->redirector('index');
-            }
-        }
- 
-        $this->view->form = $form;
-    }
+         if ($this->getRequest()->isPost()) {
 
+
+
+
+             if ($form->isValid($request->getPost())) {
+
+
+                 //$nama = new Application_Model_Karyawan2($form->getValues());
+                 //$email = new Application_Model_Karyawan2($form->getValues());
+                 //$tgllahir = new Application_Model_Karyawan2($form->getValues());
+
+
+                 $name= new Application_Model_Karyawan2($form->getValues());
+                 $mapper  = new Application_Model_Karyawan2Mapper();
+                  Zend_Debug::dump($name);
+                 $mapper->save($name);
+                // return $this->_helper->redirector('index');
+             }
+         }
+ 
+         $this->view->form = $form;
+     }
+    
 
 }
 

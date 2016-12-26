@@ -96,7 +96,7 @@ class Application_Model_Karyawan2
  
     public function setId($id)
     {
-        $this->_id = (int) $id;
+        $this->_id = (string) $id;
         return $this;
     }
  
