@@ -1,17 +1,21 @@
 <p><a href="<?php echo $this->url(
     array(
         'controller' => 'karyawan2',
-        'action'     => 'sign'
+        'action'     => 'new'
     ),
     'default',
-    true) ?>">Sign Our Guestbook</a></p>
+    true) ?>">Input new Karyawan</a></p>
  
-Guestbook Entries: <br />
-<dl>
-    <?php foreach ($this->entries as $entry): ?>
-    	<dt><?php echo $this->escape($entry->id) ?></dt>
-    	<dt><?php echo $this->escape($entry->nama) ?></dt>
-    <dt><?php echo $this->escape($entry->email) ?></dt>
-    <dd><?php echo $this->escape($entry->tgllahir) ?></dd>
-    <?php endforeach ?>
-</dl>
+Karyawan Entries: <br />
+
+<table class="table table-striped table-hover table-bordered"><th>NIK</th><th>Nama</th><th>Email</th><th>Tanggal Lahir</th>
+  <?php  foreach($this->entries as $entry): ?>
+  
+        <tr>
+            <td><?php echo $this->escape($entry->id) ?></td>
+            <td><?php echo $this->escape($entry->nama) ?></td>
+            <td><?php echo $this->escape($entry->email) ?></td>
+            <td><?php echo $this->escape($entry->tgllahir) ?></td>
+        </tr>
+  <?php endforeach;?>
+</table>

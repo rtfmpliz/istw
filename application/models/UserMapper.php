@@ -1,9 +1,8 @@
 <?php
 
-class Application_Model_Karyawan2Mapper
+class Application_Model_UserMapper
 {
-	
-		protected $_dbTable;
+    protected $_dbTable;
  
     public function setDbTable($dbTable)
     {
@@ -20,50 +19,49 @@ class Application_Model_Karyawan2Mapper
     public function getDbTable()
     {
         if (null === $this->_dbTable) {
-            $this->setDbTable('Application_Model_DbTable_Karyawan2');
+            $this->setDbTable('Application_Model_DbTable_User');
         }
         return $this->_dbTable;
-}
-        public function save(Application_Model_Karyawan2 $karyawan2)
+    }
+ 
+    public function save(Application_Model_User $user)
     {
-		 $data = array(
-             'id' => $karyawan2->getId(),
-            'email'   => $karyawan2->getEmail(),
-            'nama' => $karyawan2->getNama(),
-            'tgllahir' => $karyawan2->getTgllahir(),
+        $data = array(
+            'email'   => $guestbook->getEmail(),
+            'comment' => $guestbook->getComment(),
             'created' => date('Y-m-d H:i:s'),
         );
  
-        if (null === ($id = $karyawan2->getId())) {
+        if (null === ($id = $guestbook->getId())) {
             unset($data['id']);
             $this->getDbTable()->insert($data);
         } else {
             $this->getDbTable()->update($data, array('id = ?' => $id));
         }
-	}
-    public function find($id, Application_Model_Karyawan2 $karyawan2)
+    }
+ 
+    public function find($id, Application_Model_Guestbook $guestbook)
     {
-    	$result = $this->getDbTable()->find($id);
+        $result = $this->getDbTable()->find($id);
         if (0 == count($result)) {
             return;
         }
         $row = $result->current();
-        $karyawan2->setId($row->id)
+        $guestbook->setId($row->id)
                   ->setEmail($row->email)
-                  ->setNama($row->nama)
-                  ->setTgllahir($row->tgllahir)
+                  ->setComment($row->comment)
                   ->setCreated($row->created);
     }
+ 
     public function fetchAll()
     {
-    	$resultSet = $this->getDbTable()->fetchAll();
+        $resultSet = $this->getDbTable()->fetchAll();
         $entries   = array();
         foreach ($resultSet as $row) {
-            $entry = new Application_Model_Karyawan2();
+            $entry = new Application_Model_Guestbook();
             $entry->setId($row->id)
                   ->setEmail($row->email)
-                  ->setNama($row->nama)
-                  ->setTgllahir($row->tgllahir)
+                  ->setComment($row->comment)
                   ->setCreated($row->created);
             $entries[] = $entry;
         }

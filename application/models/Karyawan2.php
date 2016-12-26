@@ -2,11 +2,12 @@
 
 class Application_Model_Karyawan2
 {
+    protected $_id;
 	protected $_nama;
     protected $_created;
     protected $_tgllahir;
     protected $_email;
-    protected $_id;
+    
 
     public function __construct(array $options = null)
     {
@@ -61,7 +62,11 @@ class Application_Model_Karyawan2
         $this->_email = (string) $email;
         return $this;
     }
-
+    public function setNama($nama)
+    {
+        $this->_nama = (string) $nama;
+        return $this;
+    }
         public function getNama()
     {
         return $this->_nama;

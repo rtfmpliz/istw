@@ -28,6 +28,7 @@
         </controllerFile>
         <controllerFile controllerName="Karyawan2">
           <actionMethod actionName="index"/>
+          <actionMethod actionName="new"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory>
@@ -36,6 +37,7 @@
         <formFile formName="Login"/>
         <formFile formName="Department"/>
         <formFile formName="Section"/>
+        <formFile formName="Karyawan2"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -48,6 +50,7 @@
           <dbTableFile dbTableName="Department"/>
           <dbTableFile dbTableName="Section"/>
           <dbTableFile dbTableName="Karyawan2"/>
+          <dbTableFile dbTableName="User"/>
         </dbTableDirectory>
         <modelFile modelName="KaryawanMapper"/>
         <modelFile modelName="Karyawan"/>
@@ -57,6 +60,7 @@
         <modelFile modelName="Section"/>
         <modelFile modelName="Karyawan2Mapper"/>
         <modelFile modelName="Karyawan2"/>
+        <modelFile modelName="UserMapper"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
@@ -91,6 +95,9 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Karyawan2">
             <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Karyawan2">
+            <viewScriptFile forActionName="new"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
