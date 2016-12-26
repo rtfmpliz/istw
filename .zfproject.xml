@@ -30,6 +30,10 @@
           <actionMethod actionName="index"/>
           <actionMethod actionName="new"/>
         </controllerFile>
+        <controllerFile controllerName="Karyawan3">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="new"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Guestbook"/>
@@ -38,6 +42,7 @@
         <formFile formName="Department"/>
         <formFile formName="Section"/>
         <formFile formName="Karyawan2"/>
+        <formFile formName="Karyawan3"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -51,6 +56,7 @@
           <dbTableFile dbTableName="Section"/>
           <dbTableFile dbTableName="Karyawan2"/>
           <dbTableFile dbTableName="User"/>
+          <dbTableFile dbTableName="Karyawan3"/>
         </dbTableDirectory>
         <modelFile modelName="KaryawanMapper"/>
         <modelFile modelName="Karyawan"/>
@@ -61,6 +67,8 @@
         <modelFile modelName="Karyawan2Mapper"/>
         <modelFile modelName="Karyawan2"/>
         <modelFile modelName="UserMapper"/>
+        <modelFile modelName="Karyawan3Mapper"/>
+        <modelFile modelName="Karyawan3"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
@@ -97,6 +105,12 @@
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Karyawan2">
+            <viewScriptFile forActionName="new"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Karyawan3">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Karyawan3">
             <viewScriptFile forActionName="new"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>

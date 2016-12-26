@@ -1,14 +1,13 @@
 <?php
 
-class Application_Model_Karyawan2
+class Application_Model_Karyawan3
 {
-    protected $_id;
-	protected $_nama;
-    protected $_created;
+    protected $_nama;
     protected $_tgllahir;
+    protected $_created;
     protected $_email;
-    
-
+    protected $_id;
+ 
     public function __construct(array $options = null)
     {
         if (is_array($options)) {
@@ -46,9 +45,9 @@ class Application_Model_Karyawan2
         return $this;
     }
  
-    public function setTgllahir($text)
+    public function setTgllahir($tgllahir)
     {
-        $this->_tgllahir = (string) $text;
+        $this->_tgllahir = (string) $tgllahir;
         return $this;
     }
  
@@ -56,27 +55,22 @@ class Application_Model_Karyawan2
     {
         return $this->_tgllahir;
     }
+        public function setNama($nama)
+    {
+        $this->_nama = (string) $nama;
+        return $this;
+    }
+ 
+    public function getNama()
+    {
+        return $this->_nama;
+    }
  
     public function setEmail($email)
     {
         $this->_email = (string) $email;
         return $this;
     }
-    public function setNama($nama)
-    {
-        $this->_nama = (string) $nama;
-        return $this;
-    }
-        public function getNama()
-    {
-        return $this->_nama;
-    }
- 
-    // public function setEmail($email)
-    // {
-    //     $this->_email = (string) $email;
-    //     return $this;
-    // }
  
     public function getEmail()
     {
@@ -96,7 +90,7 @@ class Application_Model_Karyawan2
  
     public function setId($id)
     {
-        $this->_id = (string) $id;
+        $this->_id = (int) $id;
         return $this;
     }
  

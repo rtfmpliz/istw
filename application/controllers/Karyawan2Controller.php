@@ -21,22 +21,14 @@ public function newAction()
          $form    = new Application_Form_Karyawan2();
  
          if ($this->getRequest()->isPost()) {
-
-
-
-
              if ($form->isValid($request->getPost())) {
-
-
                  //$nama = new Application_Model_Karyawan2($form->getValues());
                  //$email = new Application_Model_Karyawan2($form->getValues());
                  //$tgllahir = new Application_Model_Karyawan2($form->getValues());
-
-
-                 $name= new Application_Model_Karyawan2($form->getValues());
+                 $email= new Application_Model_Karyawan2($form->getValues());
                  $mapper  = new Application_Model_Karyawan2Mapper();
-                  Zend_Debug::dump($name);
-                 $mapper->save($name);
+                 // Zend_Debug::dump($id);
+                 $mapper->save($email);
                 // return $this->_helper->redirector('index');
              }
          }

@@ -1,0 +1,21 @@
+<p><a href="<?php echo $this->url(
+    array(
+        'controller' => 'karyawan3',
+        'action'     => 'new'
+    ),
+    'default',
+    true) ?>">Input new Karyawan</a></p>
+ 
+Karyawan Entries: <br />
+
+<table class="table table-striped table-hover table-bordered"><th>NIK</th><th>Nama</th><th>Email</th><th>Tanggal Lahir</th>
+  <?php  foreach($this->entries as $entry): ?>
+  
+        <tr>
+            <td><?php echo $this->escape($entry->id) ?></td>
+            <td><?php echo $this->escape($entry->nama) ?></td>
+            <td><?php echo $this->escape($entry->email) ?></td>
+            <td><?php echo $this->escape($entry->tgllahir) ?></td>
+        </tr>
+  <?php endforeach;?>
+</table>
